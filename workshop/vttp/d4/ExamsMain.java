@@ -14,14 +14,14 @@ public class ExamsMain {
 
         Reader r = new FileReader(srcFile);
         BufferedReader br = new BufferedReader(r);
-
         String data = br.readLine();
         
+        reporter.initializeList();
         while (data != null) {
             data = br.readLine();
             reporter.read(data);
         }
-
+        reporter.createDataset();
         reporter.report();
 
     }
